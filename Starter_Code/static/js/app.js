@@ -1,4 +1,4 @@
-//reference: https://medium.com/@vworri/use-plotly-in-javascript-to-creat-a-bar-graph-from-json-82d7220b463d
+//I used this to help reference: https://medium.com/@vworri/use-plotly-in-javascript-to-creat-a-bar-graph-from-json-82d7220b463d
 
 let url = "samples.json"
 
@@ -100,9 +100,10 @@ function init() {
 
 //use for filtering
         const firstId = idData[0];
-        buildDemographics(firstId);
         buildChart(firstId);
         buildBubbleChart(firstId);
+        buildDemographics(firstId);
+
     });
 }
 
@@ -110,10 +111,10 @@ function init() {
  
 
 function optionChanged(newId){
-    buildDemographics(newId);
     buildChart(newId);
-    // buildGuage(newId);
     buildBubbleChart(newId);
+    buildDemographics(newId);
+
 
 }
 init()
